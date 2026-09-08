@@ -1,131 +1,108 @@
-# AI Privacy Guardian
+# AI Privacy Guardian 🛡️
 
-AI Privacy Guardian is a desktop security system that automatically protects your screen when another person is detected behind you. The application uses computer vision to detect human faces through an external camera and triggers a privacy action to hide your desktop.
+A desktop security application that automatically protects your screen when another person is detected behind you. Uses computer vision to detect human faces via camera and triggers a privacy action to hide your desktop — preventing shoulder-surfing and accidental exposure of sensitive information.
 
-This project is designed for students, developers, and privacy-focused users who want to prevent shoulder-surfing or accidental exposure of sensitive information while working on a computer.
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-ComputerVision-green)
+![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
+![License](https://img.shields.io/badge/License-Educational-orange)
 
----
+Built for students, developers, and privacy-focused users who want to prevent unauthorized viewing of their screen while working.
 
-## Features
+## 📸 Demo
 
-• Real-time face detection using OpenCV
-• Automatic desktop privacy mode when a face is detected
-• Cooldown timer to prevent repeated triggers
-• Adjustable detection settings
-• Graphical User Interface (GUI) for easy control
-• Background system tray mode
-• Ignore zone support for filtering specific areas
-• External USB camera compatibility
-• Works as a standalone `.exe` application
+<!-- A short GIF showing detection → privacy mode triggering would make this repo stand out significantly -->
+<!-- Example: ![Demo](screenshots/demo.gif) -->
 
----
+## 🔥 Features
 
-## How It Works
+- 👁️ **Real-time face detection** using OpenCV
+- 🔒 **Automatic desktop privacy mode** when an unauthorized face is detected
+- ⏱️ **Cooldown timer** to prevent repeated triggers
+- ⚙️ **Adjustable detection settings**
+- 🖥️ **Graphical User Interface (GUI)** for easy control
+- 📌 **Background system tray mode**
+- 🚫 **Ignore zone support** to filter out specific areas of the frame
+- 🎥 **External USB camera compatibility**
+- 📦 **Standalone `.exe`** build support (no Python install needed to run)
 
-The system continuously monitors a camera feed and analyzes each frame using a face detection model. When a face is detected outside the defined ignore zone, the program activates privacy mode by hiding the desktop.
+## 🎯 How It Works
 
-Typical workflow:
+The system continuously monitors a camera feed and analyzes each frame using a Haar Cascade face detection model. When a face is detected outside the defined ignore zone, the program activates privacy mode.
 
+**Workflow:**
 1. Start detection from the GUI
-2. Camera feed begins scanning for faces
-3. If another person appears behind the user
-4. Privacy mode activates (desktop is minimized)
-5. Cooldown timer prevents repeated triggering
+2. Camera feed begins scanning for faces in real time
+3. If a face is detected outside the ignore zone (i.e., a second person behind the user)
+4. Privacy mode activates — desktop is minimized
+5. A cooldown timer prevents the action from re-triggering immediately
 
----
+## 🛠 Tech Stack
 
-## Project Structure
+| Category | Technology |
+|---|---|
+| Language | Python 3.8+ |
+| Computer Vision | OpenCV (Haar Cascade classifier) |
+| Automation | PyAutoGUI |
+| System Tray Integration | PyStray, Pillow |
+| Packaging | PyInstaller |
 
-AI-Privacy-Guardian
+## 📁 Project Structure
 
-main.py – Main application logic
-haarcascade_frontalface_default.xml – Face detection model
-README.md – Project documentation
-requirements.txt – Python dependencies
 
----
+## 🚀 Installation & Usage
 
-## Installation
+### Prerequisites
+- Python 3.8+
+- A webcam or external USB camera
 
-Clone the repository:
+### Setup
 
-git clone https://github.com/yourusername/AI-Privacy-Guardian.git
-
-Move into the project folder:
-
+```bash
+# Clone the repository
+git clone https://github.com/Anand8973/AI-Privacy-Guardian.git
 cd AI-Privacy-Guardian
 
-Install required dependencies:
-
+# Install dependencies
 pip install -r requirements.txt
 
----
-
-## Running the Application
-
-Run the main script:
-
+# Run the application
 python main.py
+```
 
-The GUI will open where you can start or stop the detection system.
+The GUI will open, where you can start or stop the detection system.
 
----
+### Building a Standalone `.exe`
 
-## Creating the EXE File
-
-Install PyInstaller:
-
+```bash
 pip install pyinstaller
 
-Build the executable:
-
 pyinstaller --onefile --noconsole --add-data "haarcascade_frontalface_default.xml;." main.py
+```
 
-The executable will be generated in the `dist` folder.
+The executable will be generated in the `dist/` folder.
 
----
+## 💡 Use Cases
 
-## Requirements
+- Privacy protection in shared or public workspaces
+- Secure work environments handling sensitive data
+- Content creators protecting on-screen information during recording
+- Demonstration project for computer vision coursework
 
-Python 3.8+
+## 🔮 Future Improvements
 
-Required libraries:
+- [ ] Replace Haar Cascade with a deep learning-based human detector for improved accuracy
+- [ ] Add face recognition to distinguish and ignore the primary user
+- [ ] Screen blur as an alternative to minimizing applications
+- [ ] Mobile/desktop notification on detection
+- [ ] Multi-camera support
 
-OpenCV
-PyAutoGUI
-PyStray
-Pillow
-
----
-
-## Future Improvements
-
-Possible upgrades for the project:
-
-• Human detection using deep learning models
-• Face recognition to ignore the primary user
-• Screen blur instead of minimizing applications
-• Mobile notification when someone is detected
-• Multi-camera support
-
----
-
-## Use Cases
-
-• Privacy protection in public workspaces
-• Secure work environments
-• Content creators protecting sensitive information
-• Demonstration project for computer vision courses
-
----
-
-## License
+## 📄 License
 
 This project is open source and available for educational and research purposes.
 
----
+## 👤 Author
 
-## Author
-
-Anand Arya
-B.Tech Computer Science Engineering
+**Anand Arya**
+- GitHub: [@Anand8973](https://github.com/Anand8973)
+- LinkedIn: [Anand Arya](https://www.linkedin.com/in/anand-arya-27b260368/)
