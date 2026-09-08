@@ -10,9 +10,8 @@ A desktop security application that automatically protects your screen when anot
 Built for students, developers, and privacy-focused users who want to prevent unauthorized viewing of their screen while working.
 
 ## 📸 Demo
+<img width="397" height="402" alt="image" src="https://github.com/user-attachments/assets/99099c03-5cbd-4e11-b090-a3f680978861" />
 
-<!-- A short GIF showing detection → privacy mode triggering would make this repo stand out significantly -->
-<!-- Example: ![Demo](screenshots/demo.gif) -->
 
 ## 🔥 Features
 
